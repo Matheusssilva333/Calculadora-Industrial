@@ -1,9 +1,48 @@
+<Calculadora_Industrial class="html"></Calculadora_Industrial>
 <!DOCTYPE html>
 <html>
 <head>
 
 <title> Calculadora Industrial</title>
+</head>
+<body>
+    <div class="fundo"> 
+<h1>Calculadora Industrial</h1>
+<div class="calculadora">
+<h1>Calculadora Industrial</h1>
+<p id="resultado"></p>
+      <table>     
 
+        
+<tr>
+<td><button>C</button></td>
+<td><button>/</button></td>
+<td><button>*</button></td>
+<td><button>+</button></td>
+<td><button>-</button></td>
+<td><button>=</button></td>
+<td><button>Torque</button></td>
+<td><button>RPM</button></td>
+<td><button>Potência</button></td>
+</tr>
+
+
+<tr>
+<td><button>1</button></td>
+<td><button>2</button></td>
+<td><button>3</button></td>
+<td><button>4</button></td>
+<td><button>5</button></td>
+<td><button>6</button></td>
+<td><button>7</button></td>
+<td><button>8</button></td>
+<td><button>9</button></td>
+</tr>
+
+
+</table>
+</div>
+    </div>
 <script>
   
     // variáveis
@@ -197,5 +236,5 @@ document.getElementById("resultado").innerHTML = resultado $(resultadocalculo);
 
   
 </script>
-</head>
+</body>
 </html>
