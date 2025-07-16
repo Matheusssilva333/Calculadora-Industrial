@@ -112,7 +112,7 @@ const calcular = (operator,num1,num2,cálculo,Torque,RPM,Potência) => {
   
         case 'Torque':
   
-            return raio * força * seno do ângulo;
+            return raio * força * Math.sin(120);
   
             
   
@@ -158,7 +158,7 @@ let cálculo = prompt("Escolha uma dessas opções de cálculo industrial[Torque
   
 
   
-if else ("Torque")
+if  ("Torque")
   
 
   
@@ -182,7 +182,7 @@ document.getElementById("resultado").innerHTML = resultado $(resultadocalculo);
   
 
   
-if else ("RPM") 
+if  ("RPM") 
   
 
   
