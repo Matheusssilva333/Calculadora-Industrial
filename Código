@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title> Calculadora Industrial</title>
+
+<script>
+  
+    // variáveis
+  
+var Torque
+  
+var RPM
+  
+var Potência
+  
+var raio
+  
+var força
+  
+var ângulo
+  
+var frequência
+  
+var diâmetro
+  
+var polos
+  
+var PI
+  
+var Velocidade
+  
+var Trabalho
+  
+var Tempo 
+  
+var Unidade
+  
+
+  
+    // Comandos de Operações Básicas
+  
+const calcular = (operator,num1,num2,) => {
+  
+switch (operator) {
+  
+    case '+':
+  
+    return num1 + num2;
+  
+
+  
+    case '-':
+  
+        return num1 - num2;
+  
+
+  
+        case '/':
+  
+            return num1 / num2;
+  
+
+  
+            case '*': 
+  
+            return num1 * num2;
+  
+            default:
+  
+                alert("Operador Inválido")
+  
+
+  
+
+  
+} 
+  
+
+  
+}
+  
+let operator = prompt("Escolha um desses Operadores[+,-,/,*]");
+  
+let number1 = parseFloat(prompt("Insira o primeiro número"));
+  
+let number2 = parseFloat(prompt("Insira o segundo número"));
+  
+
+  
+let resultadocalculo = calcular(operator,number1,number2);
+  
+document.getElementById("resultado").innerHTML = resultado $(resultadocalculo);
+  
+
+  
+// Comandos de Cálculo Industrial
+  
+
+  
+const calcular = (operator,num1,num2,cálculo,Torque,RPM,Potência) => {
+  
+    
+  
+    
+  
+    switch (cálculo) {
+  
+        // Cálculo do Torque
+  
+
+  
+        case 'Torque':
+  
+            return raio * força * seno do ângulo;
+  
+            
+  
+            // Cálculo do RPM
+  
+
+  
+            case 'RPM':
+  
+                return 120 * frequência;
+  
+
+  
+                // Cálculo da Potência
+  
+
+  
+                case 'Potência'
+  
+                return Trabalho / Tempo
+  
+
+  
+
+  
+
+  
+
+  
+    }
+  
+
+  
+}
+  
+
+  
+let cálculo = prompt("Escolha uma dessas opções de cálculo industrial[Torque,RPM,Potência]");
+  
+
+  
+// Opção de Cálculo de Torque
+  
+
+  
+if else ("Torque")
+  
+
+  
+let number1 = parseFloat(prompt("Insira o valor do raio"));
+  
+let number2 = parseFloat(prompt("Insira o valor da força"));
+  
+let number3 = parseFloat(prompt("Insira o valor do Seno do ângulo"));
+  
+
+  
+
+  
+let resultadocalculo = calcular(Torque,number1,number2,number3);
+  
+document.getElementById("resultado").innerHTML = resultado $(resultadocalculo);
+  
+
+  
+// Opção de Cálculo de RPM
+  
+
+  
+if else ("RPM") 
+  
+
+  
+let number1 = parseFloat(prompt("Insira o valor da frequência"));
+  
+let resultadocalculo = calcular(RPM,number1);
+  
+document.getElementById("resultado").innerHTML = resultado $(resultadocalculo);
+  
+
+  
+
+  
+</script>
+</head>
+</html>
