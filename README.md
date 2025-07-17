@@ -9,3 +9,4 @@ Funcionalidades:
 - Multiplicação
 - Cálculo de RPM
 - Cálculo de Torque
+- Cálculo de Potência
