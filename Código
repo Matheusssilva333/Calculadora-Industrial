@@ -1,258 +1,131 @@
-Calculadora_Industrial
-<Calculadora_Industrial class="html"></Calculadora_Industrial>
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-
-<title> Calculadora Industrial</title>
-<style>
-    {
-margin:0;
-padding:0;
-
+  <meta charset="UTF-8" />
+  <title>Calculadora Industrial</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
     }
-.fundo{
 
-    div {background-color: brown;}
+    body {
+      background-color: #1e1e1e;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
-    section {background-color: black;}
+    .calculadora {
+      background-color: #333;
+      padding: 20px;
+      border-radius: 8px;
+      width: 400px;
+      margin: auto;
+    }
 
-}
+    button {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+    }
 
-</style>
+    #resultado {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
 </head>
 <body>
-    <div class="fundo"> 
-<h1>Calculadora Industrial</h1>
-<div class="calculadora">
-<h1>Calculadora Industrial</h1>
-<p id="resultado"></p>
-      <table>     
+  <div class="calculadora">
+    <h1>Calculadora Industrial</h1>
+    <div id="resultado">Resultado aparecerá aqui...</div>
+    <button onclick="executarCalculo()">Executar Cálculo</button>
+  </div>
 
+  <script>
+    function executarCalculo() {
+      const tipo = prompt("Escolha o tipo de cálculo: [1] Soma, [2] Subtração, [3] Multiplicação, [4] Divisão, [5] Torque, [6] RPM, [7] Potência");
 
-<tr>
-<td><button>C</button></td>
-<td><button>/</button></td>
-<td><button>*</button></td>
-<td><button>+</button></td>
-<td><button>-</button></td>
-<td><button>=</button></td>
-<td><button>Torque</button></td>
-<td><button>RPM</button></td>
-<td><button>Potência</button></td>
-</tr>
+      let resultado;
 
+      switch (tipo) {
+        case "1":
+          resultado = calcularBasico("+");
+          break;
+        case "2":
+          resultado = calcularBasico("-");
+          break;
+        case "3":
+          resultado = calcularBasico("*");
+          break;
+        case "4":
+          resultado = calcularBasico("/");
+          break;
+        case "5":
+          resultado = calcularTorque();
+          break;
+        case "6":
+          resultado = calcularRPM();
+          break;
+        case "7":
+          resultado = calcularPotencia();
+          break;
+        default:
+          resultado = "Opção inválida.";
+      }
 
-<tr>
- <td><button>.</button></td>
- <td><button>0</button></td>
-<td><button>1</button></td>
-<td><button>2</button></td>
-<td><button>3</button></td>
-<td><button>4</button></td>
-<td><button>5</button></td>
-<td><button>6</button></td>
-<td><button>7</button></td>
-<td><button>8</button></td>
-<td><button>9</button></td>
-</tr>
-
-
-</table>
-</div>
-    </div>
-<script>
-  
-    // variáveis
-  
-var Torque
-  
-var RPM
-  
-var Potência
-  
-var raio
-  
-var força
-  
-var ângulo
-  
-var frequência
-  
-var diâmetro
-  
-var polos
-  
-var PI
-  
-var Velocidade
-  
-var Trabalho
-  
-var Tempo 
-  
-var Unidade
-  
-
-  
-    // Comandos de Operações Básicas
-  
-const calcular = (operator,num1,num2,) => {
-  
-switch (operator) {
-  
-    case '+':
-  
-    return num1 + num2;
-  
-
-  
-    case '-':
-  
-        return num1 - num2;
-  
-
-  
-        case '/':
-  
-            return num1 / num2;
-  
-
-  
-            case '*': 
-  
-            return num1 * num2;
-  
-            default:
-  
-                alert("Operador Inválido")
-  
-
-  
-
-  
-} 
-  
-
-  
-}
-  
-let operator = prompt("Escolha um desses Operadores[+,-,/,*]");
-  
-let number1 = parseFloat(prompt("Insira o primeiro número"));
-  
-let number2 = parseFloat(prompt("Insira o segundo número"));
-  
-
-  
-let resultadocalculo = calcular(operator,number1,number2);
-  
-document.getElementById("resultado").innerHTML = resultado $(resultadocalculo);
-  
-
-  
-// Comandos de Cálculo Industrial
-  
-
-  
-const calcular = (operator,num1,num2,cálculo,Torque,RPM,Potência) => {
-  
-    
-  
-    
-  
-    switch (cálculo) {
-  
-        // Cálculo do Torque
-  
-
-  
-        case 'Torque':
-  
-            return raio * força * Math.sin(120);
-  
-            
-  
-            // Cálculo do RPM
-  
-
-  
-            case 'RPM':
-  
-                return 120 * frequência;
-  
-
-  
-                // Cálculo da Potência
-  
-
-  
-                case 'Potência'
-  
-                return Trabalho / Tempo
-  
-
-  
-
-  
-
-  
-
-  
+      document.getElementById("resultado").innerText = "Resultado: " + resultado;
     }
-  
 
-  
-}
-  
+    function calcularBasico(operador) {
+      const num1 = parseFloat(prompt("Digite o primeiro número:"));
+      const num2 = parseFloat(prompt("Digite o segundo número:"));
 
-  
-let cálculo = prompt("Escolha uma dessas opções de cálculo industrial[Torque,RPM,Potência]");
-  
+      if (isNaN(num1) || isNaN(num2)) return "Entrada inválida";
 
-  
-// Opção de Cálculo de Torque
-  
+      switch (operador) {
+        case "+":
+          return num1 + num2;
+        case "-":
+          return num1 - num2;
+        case "*":
+          return num1 * num2;
+        case "/":
+          return num2 !== 0 ? num1 / num2 : "Divisão por zero";
+      }
+    }
 
-  
-if  ("Torque")
-  
+    function calcularTorque() {
+      const raio = parseFloat(prompt("Insira o valor do raio (m):"));
+      const forca = parseFloat(prompt("Insira o valor da força (N):"));
+      const angulo = parseFloat(prompt("Insira o valor do ângulo (em graus):"));
 
-  
-let number1 = parseFloat(prompt("Insira o valor do raio"));
-  
-let number2 = parseFloat(prompt("Insira o valor da força"));
-  
-let number3 = parseFloat(prompt("Insira o valor do Seno do ângulo"));
-  
+      if (isNaN(raio) || isNaN(forca) || isNaN(angulo)) return "Entrada inválida";
 
-  
+      const seno = Math.sin(angulo * Math.PI / 180);
+      return (raio * forca * seno).toFixed(2) + " N·m";
+    }
 
-  
-let resultadocalculo = calcular(Torque,number1,number2,number3);
-  
-document.getElementById("resultado").innerHTML = resultado $(resultadocalculo);
-  
+    function calcularRPM() {
+      const frequencia = parseFloat(prompt("Insira o valor da frequência (Hz):"));
 
-  
-// Opção de Cálculo de RPM
-  
+      if (isNaN(frequencia)) return "Entrada inválida";
 
-  
-if  ("RPM") 
-  
+      return (120 * frequencia).toFixed(2) + " RPM";
+    }
 
-  
-let number1 = parseFloat(prompt("Insira o valor da frequência"));
-  
-let resultadocalculo = calcular(RPM,number1);
-  
-document.getElementById("resultado").innerHTML = resultado $(resultadocalculo);
-  
+    function calcularPotencia() {
+      const trabalho = parseFloat(prompt("Insira o trabalho (J):"));
+      const tempo = parseFloat(prompt("Insira o tempo (s):"));
 
-  
+      if (isNaN(trabalho) || isNaN(tempo)) return "Entrada inválida";
+      if (tempo === 0) return "Tempo não pode ser zero";
 
-  
-</script>
+      return (trabalho / tempo).toFixed(2) + " W";
+    }
+  </script>
 </body>
 </html>
+
