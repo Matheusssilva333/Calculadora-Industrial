@@ -1,3 +1,4 @@
+Calculadora Industrial
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -110,10 +111,13 @@
 
     function calcularRPM() {
       const frequencia = parseFloat(prompt("Insira o valor da frequência (Hz):"));
-
       if (isNaN(frequencia)) return "Entrada inválida";
 
-      return (120 * frequencia).toFixed(2) + " RPM";
+      const numeroPolos = parseFloat(prompt("Insira o valor do número de polos:"));
+if (isNaN(numeroPolos)) return "Entrada inválida";
+
+return (120 * frequencia / numeroPolos).toFixed(2) + " RPM";
+
     }
 
     function calcularPotencia() {
@@ -128,4 +132,3 @@
   </script>
 </body>
 </html>
-
