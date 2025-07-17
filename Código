@@ -14,7 +14,7 @@ padding:0;
 
     div {background-color: brown;}
 
-    section {background-color: black}
+    section {background-color: black;}
 
 }
 
