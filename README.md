@@ -10,3 +10,5 @@ Funcionalidades:
 - Cálculo de RPM
 - Cálculo de Torque
 - Cálculo de Potência
+
+Observação: O Cálculo de RPM da Calculadora é para motores elétricos.
