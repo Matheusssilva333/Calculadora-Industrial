@@ -1,5 +1,6 @@
 Calculadora Industrial
 
+
 Objetivo: O objetivo dessa calculadora é realizar cálculos mecânicos além das operações básicas.
 
 Linguagens e Tecnologias usadas:
